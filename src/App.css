@@ -9,8 +9,10 @@ body {
 
 .app {
   position: absolute;
+  display: grid;
   top: 10%;
   left: 50%;
+  align-items: center;
   transform: translate(-50%, -10%);
 }
 
@@ -24,19 +26,13 @@ h2 {
   text-align: center;
 }
 
-.app .input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .app .input {
   margin-top: 0.8em;
   width: 20em;
   height: 2em;
-  background-color: rgb(0, 255, 115);
+  background-color: rgb(255, 255, 255);
   display: flex;
-  justify-content: space-between;
   align-items: center;
   border-radius: 6px;
   padding: 5px;
@@ -47,6 +43,9 @@ h2 {
   height: 1.6em;
   border-color: transparent;
   outline-color: transparent;
+  color: blueviolet;
+  align-content: center;
+  align-items: center;
 }
 
 .app i {
@@ -84,5 +83,14 @@ h2 {
   font-size: medium;
   font-weight: 700;
   font-style: normal;
-  color: grey;
+  color: rgb(0, 0, 0);
+}
+.app .completed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+
 }

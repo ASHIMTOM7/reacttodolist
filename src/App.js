@@ -13,11 +13,14 @@ function App() {
       </div>
       <div className="subHeading">
         <br />
-        <h2>ADD TASKS  ☕ </h2>
+        <h2>ADD TASKS ...☕ </h2>
       </div>
+      <div className="todos">
       <div className="input">
-        <input value={toDo} onChange={(e)=>setToDo(e.target.value)} type="text" placeholder="🖊️ Add item..." />
+
+        <input value={toDo} onChange={(e)=>setToDo(e.target.value)} type="text" placeholder="🖊️ Add a task..." />
         <i onClick={()=>setTodos([...toDos,{id:Date.now(),text:toDo,status:false}])}className="fas fa-plus"></i>
+      </div>
       </div>
       <div className="todos">
         {
@@ -57,14 +60,19 @@ function App() {
         }) 
         }
 
-        {toDos.map((obj)=>{
-          if(obj.status){
-            return(<h1>{obj.text}</h1>)
-          }
-          return null
-        })}
-      </div>
+         </div>
+         <div>
+        <div className="completed"></div>
+         {toDos.map((obj)=>{
+      if(obj.status){
+        return(<h1>{obj.text} completed!!</h1>)
+      }
+      return null
+    })}
+         </div>
     </div>
+    
+    
   );
 }
 
